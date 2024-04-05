@@ -2,6 +2,7 @@ import React from 'react';
 import "./App.css";
 import Navbar from "../components/Navbar.jsx";
 import GameList from "../components/Gamelist.jsx";
+import Gameplayer from "../components/Gameplayer.jsx";
 import { Routes, Route } from 'react-router-dom';
 
 export default function App() {
@@ -16,7 +17,7 @@ export default function App() {
           <Route path="/" element={<Main />} />
         </Routes>
         <Routes>
-          <Route path="*" element={<notFound />}/>
+          <Route path="/game" element={<Gameplayer />}/>
         </Routes>
       </div>
     </div>
@@ -36,13 +37,4 @@ function Main() {
       </div>
     </>
   );
-}
-function notFound() {
-  return (
-    <>
-      <h1 className="title">
-        404 - Page not found
-      </h1>
-    </>
-  )
 }

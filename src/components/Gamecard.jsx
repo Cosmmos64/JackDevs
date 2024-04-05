@@ -1,11 +1,12 @@
 import "./Gamecard.css";
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Gamecard = ({ imgUrl, gameUrl, gameText, }) => {
+const Gamecard = ({ imgUrl, core, rom, gameText, }) => {
   return (
     <div className="Gamecard">
-      <a href={gameUrl}><img src={imgUrl} /></a>
-      <a href={gameUrl}><p>{gameText}</p></a>
+      <Link to={`/game?core=${core}&rom=${rom}`}><img src={imgUrl} /></Link>
+      <Link to={`/game?core=${core}&rom=${rom}`}><p>{gameText}</p></Link>
     </div>
   );
 }
