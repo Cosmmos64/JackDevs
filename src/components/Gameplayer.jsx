@@ -7,12 +7,12 @@ function Gameplayer() {
   const rom = searchParams.get('rom');
   
   return(
-    <>
+    <div className='wrapper'>
       <EmulatorJS
         EJS_core={core}
         EJS_gameUrl={rom}
         />
-    </>
+    </div>
   )
 }
 export default Gameplayer;
